@@ -22,10 +22,12 @@ Route::get('/', function () {
 //admin/profile/edit にアクセスしたら ProfileController の edit Action に
 //割り当てるように設定してください。
 
-Route::group(['prefix' => 'admin'], function() {
-     Route::get('profile/create', 'admin\ProfileController@add');
-     Route::get('profile/create', 'admin\ProfileController@edit');
+
+Route::group(['prefix' =>'admin'],function(){
+	Route::get('profile/create', 'admin\profilecontroller@add');
+	Route::get('profile/edit', 'admin\profilecontroller@edit');
 });
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add');
 });
