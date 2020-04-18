@@ -10,4 +10,4 @@
     <body>
         <h1>Myニュース作成画面</h1>
     </body>
-</html
+</html>

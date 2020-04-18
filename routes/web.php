@@ -23,11 +23,9 @@ Route::get('/', function () {
 //割り当てるように設定してください。
 
 
-Route::group(['prefix' =>'admin'],function(){
-	Route::get('profile/create', 'admin\profilecontroller@add');
-	Route::get('profile/edit', 'admin\profilecontroller@edit');
-});
 
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' =>'admin'],function(){
+	Route::get('profile/create', 'Admin\profilecontroller@add');
+	Route::get('profile/edit', 'Admin\profilecontroller@edit');
     Route::get('news/create', 'Admin\NewsController@add');
 });
