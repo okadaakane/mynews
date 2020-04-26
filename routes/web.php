@@ -23,6 +23,7 @@ Route::get('/', function () {
 //割り当てるように設定してください。
 
 
+
 Route::group(['prefix' =>'admin', 'middleware' => 'auth'],function(){
 	Route::get('profile/create', 'Admin\ProfileController@add');
 	Route::post('profile/create', 'Admin\ProfileController@create');
@@ -31,8 +32,9 @@ Route::group(['prefix' =>'admin', 'middleware' => 'auth'],function(){
     Route::get('news/create', 'Admin\NewsController@add');
     Route::post('news/create', 'Admin\NewsController@create'); 
 
+
+
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
