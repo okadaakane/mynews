@@ -27,4 +27,5 @@ class profileController extends Controller
     {
         return redirect('admin/profile/edit');
     }
+
 }
