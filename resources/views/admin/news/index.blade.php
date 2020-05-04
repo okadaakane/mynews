@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-4">
                 <a href="{{ action('Admin\NewsController@add') }}" role="button" class="btn btn-primary">新規作成</a>
-            </div>35
+            </div>
             <div class="col-md-8">
                 <form action="{{ action('Admin\NewsController@index') }}" method="get">
                     <div class="form-group row">
