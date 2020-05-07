@@ -41,8 +41,10 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
     Route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
 
-
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'NewsController@index');
+// /profile にアクセスが来たら ProfileController/index Action に渡すように設定してください。
+Route::get('/profile', 'ProfileController@index');
